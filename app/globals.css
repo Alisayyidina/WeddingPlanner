@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #f8faf5;
+  color: #191c19;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+@layer components {
+  .btn-primary {
+    @apply rounded-full bg-brand-primary-container text-brand-surface-container-lowest px-6 py-3 font-medium transition-all hover:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply rounded-full border border-brand-secondary text-brand-on-surface px-6 py-3 font-medium hover:bg-brand-surface-container transition-colors;
+  }
+
+  .glass-card {
+    @apply bg-brand-surface-container-lowest shadow-paper rounded-xl border border-brand-outline-variant/30 p-space-xl;
+  }
+}
+
